@@ -24,7 +24,7 @@ java -cp picketbox-5.0.2.Final.jar org.picketbox.datasource.security.SecureIdent
 
 Update the DB `password` property on yaml file with your encrypted password
 
-Step 4:
+**Step 4:**
 
 Run the example:
 
