@@ -1,0 +1,23 @@
+swarm:
+  datasources:
+    jdbc-drivers:
+      org.postgresql:
+        driver-class-name: org.postgresql.Driver
+        xa-datasource-class-name: org.postgresql.xa.PGXADataSource
+        driver-module-name: org.postgresql
+    data-sources:
+      ExampleDS:
+        driver-name: org.postgresql
+        connection-url: jdbc:postgresql://localhost:5432/postgres
+        security-domain: myEncryptedDs
+  security:
+    security-domains:
+      myEncryptedDs:
+        classic-authentication:
+          login-modules:
+            myLoginModule:
+              code: org.picketbox.datasource.security.SecureIdentityLoginModule
+              flag: required
+              module-options:
+                username: postgres
+                password: 28d99eea8694a164
