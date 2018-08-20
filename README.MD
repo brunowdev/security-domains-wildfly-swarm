@@ -4,7 +4,7 @@ This project shows how to use a custom Security Domain to encrypt your DB passwo
 
 You can also use the logic on `yaml` for Oracle Db.
 
-Step 1:
+**Step 1:**
 
 You can run Postgresql with docker or just use your running instance. If you choose an existing instance, check your pass and database name.
 
@@ -12,7 +12,7 @@ You can run Postgresql with docker or just use your running instance. If you cho
 docker run -e POSTGRES_PASSWORD=yourDbPass -d -p 5432:5432 postgres
 ``` 
 
-Step 2:
+**Step 2:**
 
 To encrypt an DB pass with picketbox, just run the jar file inside the jars folder passing the following paramters:
 
@@ -20,7 +20,7 @@ To encrypt an DB pass with picketbox, just run the jar file inside the jars fold
 java -cp picketbox-5.0.2.Final.jar org.picketbox.datasource.security.SecureIdentityLoginModule yourDbPass
 ``` 
 
-Step 3:
+**Step 3:**
 
 Update the DB `password` property on yaml file with your encrypted password
 
