@@ -20,4 +20,4 @@ swarm:
               flag: required
               module-options:
                 username: postgres
-                password: 28d99eea8694a164
+                password: youEncryptedPassword
